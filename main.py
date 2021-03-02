@@ -40,6 +40,7 @@ def adif_action():
     global name
     adif.read_ADIF(name)
     qso_anzahl_label.config(text = "Anzahl QSOs: " + str(adif.getAnzahl()))
+    adif.getDXCCs()
 
 def statistik_action():
     newWindow = Toplevel(fenster)
@@ -47,11 +48,13 @@ def statistik_action():
     labelCW = Label(newWindow, text = "CW: " + str(adif.getAnzahlMode('CW')))
     labelSSB = Label(newWindow, text = "SSB: " + str(adif.getAnzahlMode('SSB')))
     labelFT8 = Label(newWindow, text = "FT8: " + str(adif.getAnzahlMode('FT8')))
+    labelAnzahlDXCC = Label(newWindow, text = "DXCCs: " + str(adif.anzahlDXCCs()))
 
     labelFM.pack()
     labelCW.pack()
     labelSSB.pack()
     labelFT8.pack()
+    labelAnzahlDXCC.pack()
 
 def action_get_info_dialog():
 	m_text = "\
