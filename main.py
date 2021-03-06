@@ -1,3 +1,6 @@
+#!/usr/bin/python
+#-*- coding:utf-8 -*-
+
 from tkinter import *
 #import tkinter as tk
 from tkinter import messagebox, filedialog
@@ -57,12 +60,7 @@ def statistik_action():
     labelAnzahlDXCC.pack()
 
 def action_get_info_dialog():
-	m_text = "\
-************************\n\
-Autor: Julian Wöhrer\n\
-Date: 02.03.2021\n\
-Version: 0.01\n\
-************************"
+	m_text = " ************************\nAutor: Julian Woehrer\nDate: 02.03.2021\nVersion: 0.01\n************************"
 	messagebox.showinfo(message=m_text, title = "Infos")
         
 name = conf['lastpfad']
